@@ -14019,8 +14019,8 @@ It is a ratio of true positives(words classified as spam, and which are actually
 <ul>
 <li>Overfitting must be avoided through the selection of the correct kernel choice and regularisation term if the number of features far exceeds the number of samples. <a href="https://scikit-learn.org/stable/modules/svm.html">[2]</a></li>
 <li>Inefficient five-fold cross-validation is deployed to calculate probability estimates.<a href="https://scikit-learn.org/stable/modules/svm.html">[2]</a></li>
-<li>Can only be applied to two class tasks. As a result, multi-class tasks must be reduced to several binary problems.</li>
-<li>The parameters of a model that has been solved can be difficult to interpret.</li>
+<li>Does not perform well in large datasets as training is cubic in the size of the dataset. [5]</li>
+<li>Does not work well with lots of noise, so when classes are overlapping you have to count independant evidence (this is where a NB classifier would work better). [5]</li>
 </ul>
 <p><strong>What makes it a good candidate for the problem:</strong></p>
 <ul>
@@ -14043,8 +14043,7 @@ It is a ratio of true positives(words classified as spam, and which are actually
 <ul>
 <li>KNN gets its information from its input neighbours. As a result of this, localised outliers can affect outcomes significantly when compared with other algorithms which have a generalised view of the data. It is sensitive to localised data. <a href="https://brilliant.org/wiki/k-nearest-neighbors/#pros-and-cons">[3]</a></li>
 <li>One of its strengths, lazy-learning, is also one of its weaknesses. As most of the computation is done during testing, rather than during training, this can result in long computation times when dealing with large datasets. <a href="https://brilliant.org/wiki/k-nearest-neighbors/#pros-and-cons">[3]</a></li>
-<li>If there is a type of categorey that is present much more than another, classifying an input will result in a bias to this more abundent categorey. This can be dealt with by adjusting the weights based on occurences, but will still pose a problem near the decision boundary. <a href="https://brilliant.org/wiki/k-nearest-neighbors/#pros-and-cons">[3]</a></li>
-<li>Inputs can be close to many points when there are many dimensions. </li>
+<li>If there is a type of categorey that is present much more than another, classifying an input will result in a bias to this more abundent categorey. This can be dealt with by adjusting the weights based on occurences, but will still pose a problem near the decision boundary. <a href="https://brilliant.org/wiki/k-nearest-neighbors/#pros-and-cons">[3]</a> </li>
 <li>The effectiveness of k-NN is reduced as a result. This is as it relies on the correlation between closeness and similarity. Dimension reduction can be used to reduce the effects of this, but variable trends may be lost as a result. <a href="https://brilliant.org/wiki/k-nearest-neighbors/#pros-and-cons">[3]</a></li>
 </ul>
 <p><strong>What makes it a good candidate for the problem:</strong></p>
@@ -14056,7 +14055,7 @@ It is a ratio of true positives(words classified as spam, and which are actually
 </ul>
 <h3 id="RandomForestClassifier:">RandomForestClassifier:<a class="anchor-link" href="#RandomForestClassifier:">&#182;</a></h3><p><strong>Real world application</strong></p>
 <ul>
-<li>Use a random forest to indicate potential customer interest. For example, if there are known customer interest factors such as color, size, durability, portability or anything else that customers have indicated interest in.</li>
+<li>Use a random forest to indicate potential customer interest. For example, if there are known customer interest factors such as color, size, durability, portability or anything else that customers have indicated interest in.<a href="https://www.techopedia.com/how-might-companies-use-random-forest-models-for-predictions/7/32995">[6]</a></li>
 </ul>
 <p><strong>Strengths of the model:</strong></p>
 <ul>
@@ -14078,6 +14077,8 @@ It is a ratio of true positives(words classified as spam, and which are actually
 <li><a href="https://scikit-learn.org/stable/modules/svm.html">https://scikit-learn.org/stable/modules/svm.html</a></li>
 <li><a href="https://brilliant.org/wiki/k-nearest-neighbors/#pros-and-cons">https://brilliant.org/wiki/k-nearest-neighbors/#pros-and-cons</a></li>
 <li><a href="https://www.oreilly.com/library/view/hands-on-machine-learning/9781789346411/e17de38e-421e-4577-afc3-efdd4e02a468.xhtml">https://www.oreilly.com/library/view/hands-on-machine-learning/9781789346411/e17de38e-421e-4577-afc3-efdd4e02a468.xhtml</a></li>
+<li>Udacity lectures (Machine Learning Nano Degree)</li>
+<li><a href="https://www.techopedia.com/how-might-companies-use-random-forest-models-for-predictions/7/32995">https://www.techopedia.com/how-might-companies-use-random-forest-models-for-predictions/7/32995</a></li>
 </ol>
 
 </div>
@@ -14629,7 +14630,16 @@ RandoamFoarst is the shortest model prediction time and the highest accuracy.</p
 <p>Ensemble learning:</p>
 <p>In statistics and machine learning, ensemble methods use multiple learning algorithms to obtain better predictive performance than could be obtained from any of the constituent learning algorithms alone. A machine learning ensemble consists of a finite set of alternative models, but typically allows for much more flexible structure to exist among those alternatives.</p>
 <p>Randoam Foarst:</p>
-<p>Randoam Foarst is a machine learning technique for regression and classification problems, which produces a prediction model in the form of an ensemble of weak prediction models, typically decision trees.</p>
+<p>Randoam Foarst is a machine learning technique for regression and classification problems, which produces a prediction model in the form of an ensemble of weak prediction models, typically decision trees. 
+Random Forest operates by constructing multiple decision trees. The final decision is made based on the majority of the trees and is chosen by the random forest.</p>
+<p>A decision tree is a tree-shaped diagram used to determine a course of action. Each branch of the tree represents a possible decision, occurrence, or reaction. <a href="https://www.simplilearn.com/random-forest-algorithm-article">[1]</a></p>
+<p>As the name suggest, this algorithm creates the forest with a number of trees.
+In general, the more trees in the forest the more robust the forest looks like. In the same way in the random forest classifier, the higher the number of trees in the forest gives the high accuracy results.<a href="https://dataaspirant.com/2017/05/22/random-forest-algorithm-machine-learing/">[2]</a></p>
+<p>References:</p>
+<ol>
+<li><a href="https://www.simplilearn.com/random-forest-algorithm-article">https://www.simplilearn.com/random-forest-algorithm-article</a></li>
+<li><a href="https://dataaspirant.com/2017/05/22/random-forest-algorithm-machine-learing/">https://dataaspirant.com/2017/05/22/random-forest-algorithm-machine-learing/</a></li>
+</ol>
 
 </div>
 </div>
